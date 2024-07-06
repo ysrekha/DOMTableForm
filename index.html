@@ -1,0 +1,85 @@
+<!-- 
+
+Requirements:
+**************
+
+Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMUpdateTableRow</title>
+    
+    <!-- Following is the link needed for bootstrap npm install -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Following is the link needed for bootstrap cdn install -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+
+    <!--The table is structured with four columns and styled using the Bootstrap framework. -->
+    <!-- The rows need to dynamically be populated using JavaScript when a new row is added through the form.-->
+
+    <div class="container justify-content-center mt-5 mb-10">
+        <table id="dataTable" class="table table-bordered table-striped table-responsive-md">
+
+            <thead class="table-success">
+                <tr>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+
+            </tbody>
+        </table>
+        <p><strong> Please enter the following details to add rows to the above table:</strong></p>
+
+        <!-- Following is the code for creating a form in bootstrap-->
+        <div class="container  w-auto justify-content-center mt-2">
+            <div class="row-lg-6">
+                <div class="col-xs-12 col-sm-10 col-lg-6  border bg-light">
+                    <form class="my-2 mx-2 justify-content-start" id='myForm'>
+                        <label for="fname" class="form-label">FirstName:</label>
+                        <input type="text" class="form-control" id="fname" placeholder="e.g. John">
+
+                        <label for="lname" class="form-label">LastName:</label>
+                        <input type="text" class="form-control" id="lname" placeholder="e.g. Doe">
+
+                        <label for="emailid" class="form-label">Email Address:</label>
+                        <input type="email" class="form-control" id="emailid" placeholder="e.g. mario@gmail.com">
+
+                        <label for="phonenumber" class="form-label">Phone:</label>
+                        <input type="text" aria-hidden="true" class="form-control" id="phonenumber"
+                            placeholder="e.g. 111-111-1111">
+
+                        <button type="submit" id="submit-btn" class="btn btn-outline-secondary mt-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Following is the link needed for bootstrap javascript npm install -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Following is the link needed for bootstrap javascript cdn install -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Following is the link for the javascript that handles form submission and tablerow insertion -->
+    <script src="UpdateTableRow.js"></script>
+</body>
+
+</html>
