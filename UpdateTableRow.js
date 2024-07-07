@@ -1,7 +1,7 @@
 
 // This script contains the JavaScript logic to handle form submission and table row addition.
 
-let rowId = 0;
+let rowId = 1;
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('submit-btn');
 
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Insert cells into the row
         newRow.innerHTML = `
+            <td>${rowId++}</td>
             <td>${firstName}</td>
             <td>${lastName}</td>
             <td>${Email}</td>
