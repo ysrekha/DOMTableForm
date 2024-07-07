@@ -1,7 +1,9 @@
 
 // This script contains the JavaScript logic to handle form submission and table row addition.
 
-let rowId = 1;
+let rowId = 1; // keeps track of the number of rows added
+
+// Making sure he JavaScript interacts with elements only after they are fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('submit-btn');
 
