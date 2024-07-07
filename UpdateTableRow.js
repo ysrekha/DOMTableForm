@@ -3,7 +3,7 @@
 
 let rowId = 1; // keeps track of the number of rows added
 
-// Making sure he JavaScript interacts with elements only after they are fully loaded
+// Making sure the JavaScript interacts with elements only after they are fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('submit-btn');
 
